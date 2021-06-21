@@ -10,7 +10,7 @@ export class NotificationController {
   @Post('store')
   async store(@Body() note: Notification) {
 
-    this.notificationService.createNotification(note);
+    this.notificationService.createNotification(note)
     return {success: true}
   }
 

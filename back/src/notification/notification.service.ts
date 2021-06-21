@@ -10,12 +10,16 @@ export class NotificationService {
 
     async createNotification(notification: Notification) {
 
-        if(notification != null)
-        {
+        if(notification.token != ""){
             if(await this.notificationRepository.count({ where: { token: notification.token } }) == 0){
                 await this.notificationRepository.save(notification);
             }
+        }else{
+            return false
         }
+            
+
+        
 
     }
 
