@@ -28,6 +28,8 @@ export class NotificationController {
 
     })
 
+    return tokens;
+
     var payload = {
       notification:{
         body:"Hello from Dynamo"
